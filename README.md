@@ -221,3 +221,26 @@ Implementing the OAuth protocol yourself is extremely complicated. Using the Omn
 
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/omniauth_readme' title='OmniAuth'>OmniAuth</a> on Learn.co and start learning to code for free.</p>
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
